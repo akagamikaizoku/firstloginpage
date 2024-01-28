@@ -3,62 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link rel="icon" type="images/png" href="https://te.legra.ph/file/3af8703a85ab5b7e7fbe0.png">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
-<header style="background-color: aqua;">
-    <h1>Create your account</h1><br>
-    <a href="" >Home          </a>
-    <a href="" >About us      </a>
-    <a href="" >Disclaimer    </a>
-    <a href="" >Contact us    </a>
-
-</header>
-<main>    
 <body>
-    <form action="index.php" method="post" enctype="multipart/form-data">
-
-        <label for="username">Username: </label>
-        <input type="username" id="username" required placeholder="HelloWorld" minlength="6" maxlength="15">
-        <br><br>
-        <label for="password">Password: </label>
-        <input type="password" id="password" required minlength="8" maxlength="15">
-        <br>
-        <br>
-        <label for="email">Email: </label>
-        <input type="email" id="email" placeholder="example@example.com" required><br><br>
-        <label for="phone">Phone Number: </label>
-        <input type="tel" id="phone" placeholder="+9112345-67890" required><br><br>
-        <label for="bday">Date of birth: </label>
-        <input type="date" id="bday" required><br><br>
-        <label for="age">Age: </label>
-        <input type="number" id="age" required min="0" max="150" placeholder="18"><br><br>
-        <label for="gender">Gender: </label><br><br>
-        <label for="Male">Male</label>
-        <input type="radio" id="Male" name="gender"><br>
-        <label for="Female">Female</label>
-        <input type="radio" id="Female" name="gender"><br>
-        <label for="Other">Other</label>
-        <input type="radio" id="Other" name="gender"><br>
-        <br>
-        <label for="Payment">Choose payment option: </label>
-        <select id="Payment">
-            <option for="Credit Card">Credit Card</option>
-            <option for="Debit Card">Debit Card</option>
-            <option for="Paypal">Paypal</option>
-        </select><br>
-        <input type="checkbox" id="accept" required>
-        <label for="accept">I agree to the <a href="">terms and services</a>.</label><br>
-        
-        <label for="comments">Comments: </label>
-        <textarea type="comments"></textarea><br>
-        <label for="file">Add documents: </label>
-        <input type="file" id="file" accept="images/png; images/jpeg"><br>
-        <input type="submit"><br>
-        <input type="reset">
-    </form>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
 </body>
-</main>
-
-
 </html>
